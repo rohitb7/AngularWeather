@@ -1,0 +1,48 @@
+<div id="con" style="">
+    <div id="chartContainer2">
+    </div>
+    <div id="time">
+        <p>days {{days}} hours {{hours}}</p>
+    </div>
+    <input id="start" type="button" value="START" ng-click="start()" class="btn btn-default"> </input>
+    <input id="stop" type="button" value="STOP" ng-click="stop()" class="btn btn-default"> </input>
+    <input id="newest" type="button" value="NEWEST" ng-click="newest()" class="btn btn-default"> </input>
+    <!--    <input id="reset" type="button" value="RESET" ng-click="reset()" class="btn btn-default"> </input>-->
+    <div id="wrapper">
+        <table ng-repeat="p in meanArray" id="meanArray" style=" background-image: url({{p.img}});" class="table col-sm-4">
+            <tr>
+                <td>
+                    Day
+                </td>
+                <td>
+                    {{p.day}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Average Temperature
+                </td>
+                <td>
+                    {{p.mean}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Lower Temperature
+                </td>
+                <td>
+                    {{p.lowTemp}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    High Temperature
+                </td>
+                <td>
+                    {{p.highTemp}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
